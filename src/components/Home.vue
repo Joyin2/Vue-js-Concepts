@@ -9,5 +9,5 @@ export default{
 
 <template>
     <h1>Hello from home</h1>
-    <h2>{{ name }}</h2>
+    <h2>{{ name }}</h2> <!-- props -->
 </template>
