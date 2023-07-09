@@ -1,28 +1,30 @@
-<script setup>
-import DataBind from './DataBind.vue';
+<script>
+import ArrayProps from './components/ArrayProps.vue'
 
-// import Event from './components/Event.vue';
-// import HelloWorld from './components/HelloWorld.vue'
-// import Home from "./components/Home.vue"
-// import IfElse from './components/If-else.vue';
-// import Loop from './components/Loop.vue';
+export default {
+  components: {
+    ArrayProps
+  },
+  data() {
+    return {
+      users: [
+        { name: 'rohan', email: 'rohan@test.com' },
+        { name: 'karan', email: 'karan@test.com' },
+        { name: 'bjorn', email: 'bjorn@test.com' },
+        { name: 'john', email: 'john@test.com' }
+      ]
+    }
+  }
+}
 </script>
 
 <template>
   <div class="container">
-    <h1>hello app </h1>
+    <h1>hello app</h1>
     <!-- props -->
     <!-- <Home name="Joyin"/>   -->
-    <!-- <Event/> -->
-
-    <!-- <IfElse/> -->
-    <!-- <Loop/> -->
-    <DataBind/>
-
+    <ArrayProps v-bind:users="users" />
   </div>
-  
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
