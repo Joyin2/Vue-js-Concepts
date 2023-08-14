@@ -1,30 +1,15 @@
+<template>
+   <Table/>
+</template>
 <script>
-import ArrayProps from './components/ArrayProps.vue'
+import Table from './views/Table.vue';
 
 export default {
+  name:"App",
   components: {
-    ArrayProps
-  },
-  data() {
-    return {
-      users: [
-        { name: 'rohan', email: 'rohan@test.com' },
-        { name: 'karan', email: 'karan@test.com' },
-        { name: 'bjorn', email: 'bjorn@test.com' },
-        { name: 'john', email: 'john@test.com' }
-      ]
-    }
+    Table
   }
 }
 </script>
-
-<template>
-  <div class="container">
-    <h1>hello app</h1>
-    <!-- props -->
-    <!-- <Home name="Joyin"/>   -->
-    <ArrayProps v-bind:users="users" />
-  </div>
-</template>
 
 <style scoped></style>
